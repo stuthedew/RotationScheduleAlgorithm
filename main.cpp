@@ -19,12 +19,10 @@
 
 #include "rotation_config.h"
 
-
-using namespace std;
-using namespace rotation;
+using namespace grid;
 
 
 using namespace std;
 int main(int argc, char *argv[]) {
-    
+    cout << surg.length << endl;
 }

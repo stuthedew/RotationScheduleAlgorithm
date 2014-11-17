@@ -16,4 +16,4 @@
 
 #pragma once
 
-#include "rotation/grids.h"
+#include "grid/rotations.h"
