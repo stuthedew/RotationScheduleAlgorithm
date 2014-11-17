@@ -1,10 +1,10 @@
 /**************************************************************************/
 /*!
-    @file     grids.h
+    @file     rotations.h
     @author   Stuart Feichtinger
     @license  MIT (see license.txt)
 
-    Grid data structure
+    Rotation data
 
 
     @section  HISTORY
