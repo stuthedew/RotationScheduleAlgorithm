@@ -17,3 +17,5 @@
 #pragma once
 
 #include "grid/rotations.h"
+#include "grid/grids.h"
+#include "grid/grids.cpp"

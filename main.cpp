@@ -20,9 +20,10 @@
 #include "rotation_config.h"
 
 using namespace grid;
-
-
 using namespace std;
+
 int main(int argc, char *argv[]) {
-    cout << surg.length << endl;
+    loadGrid();
+    grid_t* gPtr = &allGrids[ 2 ] ;
+    cout << gPtr->maxSpots << endl;
 }

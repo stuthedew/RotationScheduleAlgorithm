@@ -14,20 +14,35 @@
 /**************************************************************************/
 #pragma once
 
-#define ROTATION_NUM 9 // Total number of rotations
 
-#include <ctime>
+#include <time.h>
 #include <stdint.h>
 #include "rotations.h"
 
+#define MAX_GRIDS   42
+
+#define START_YEAR  2015
+#define START_MONTH 7
+#define START_DAY   7
+
 namespace grid{
+
+  time_t startTime ;
+  struct tm * timeinfo ;
+
 
 typedef struct grid_t{
 
-  uint8_t     const   gridID ; // Grid ID given by school
-  uint8_t     const   maxSpots ; // maximum number of students per grid
-  rotation_t*         rotation[ 9 ] ; // rotation schedule
+  uint16_t       ID ; // Grid ID given by school
+  uint16_t       maxSpots ; // maximum number of students per grid
+  rotation_t*   rotation[ ROTATION_NUM ] ; // rotation schedule
 
 }grid_t;
+
+
+  grid_t       allGrids[ MAX_GRIDS ] ;
+  void          loadGrid( void ) ;
+  void          loadArray( grid_t* gPtr, uint16_t id, uint16_t maxSpots ) ;
+
 
 }

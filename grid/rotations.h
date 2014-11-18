@@ -13,8 +13,10 @@
 */
 /**************************************************************************/
 #pragma once
-#include <ctime>
+#include <time.h>
 #include <stdint.h>
+
+#define ROTATION_NUM 9 // Total number of rotations
 
 //Rotation length in weeks
 #define   MED_LENGTH      8 // General Medical
@@ -32,7 +34,7 @@
 namespace grid{
 
 typedef enum {
-    MEDICAL     , // General Medical
+    MED         , // General Medical
     NEURO       , // Neurology
     OB_GYN      , // Obstetrics/Gynecology
     PCC         , // Primary Care Clerkship
@@ -55,15 +57,18 @@ typedef struct rotation_t{
 }rotation_t;
 
 
-rotation_t  medical( MED_LENGTH ) ;
-rotation_t  neuro( NEURO_LENGTH ) ;
-rotation_t  ob_gyn( OB_GYN_LENGTH ) ;
-rotation_t  pcc( PCC_LENGTH ) ;
-rotation_t  peds( PEDS_LENGTH ) ;
-rotation_t  psych( PSYCH_LENGTH ) ;
-rotation_t  surg( SURG_LENGTH ) ;
-rotation_t  vac1( VAC_LENGTH ) ;
-rotation_t  vac2( VAC_LENGTH ) ;
+rotation_t        med( MED_LENGTH ) ;
+rotation_t        neuro( NEURO_LENGTH ) ;
+rotation_t        ob_gyn( OB_GYN_LENGTH ) ;
+rotation_t        pcc( PCC_LENGTH ) ;
+rotation_t        peds( PEDS_LENGTH ) ;
+rotation_t        psych( PSYCH_LENGTH ) ;
+rotation_t        surg( SURG_LENGTH ) ;
+rotation_t        vac( VAC_LENGTH ) ;
+rotation_t* const vac1 = &vac;
+rotation_t* const vac2 = &vac;
+
+rotation_t* const rotationArray[] = { &med, &neuro, &ob_gyn,  &pcc, &peds, &psych, &surg, vac1, vac2 } ;
 
 
 }
