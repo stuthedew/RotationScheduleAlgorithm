@@ -1,6 +1,6 @@
 /**************************************************************************/
 /*!
-    @file     rotation_config.cpp
+    @file     grid_config.h
     @author   Stuart Feichtinger
     @license  MIT (see license.txt)
 
@@ -16,6 +16,5 @@
 
 #pragma once
 
-#include "grid/rotations.h"
-#include "grid/grids.h"
-#include "grid/grids.cpp"
+#include "grids.h"
+#include "rotations.h"

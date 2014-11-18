@@ -13,6 +13,7 @@
 */
 /**************************************************************************/
 #pragma once
+
 #include <time.h>
 #include <stdint.h>
 
@@ -49,26 +50,13 @@ typedef enum {
 
 typedef struct rotation_t{
 
-  time_t  const   length ; //number of seconds
+  time_t   length ; //number of seconds
 
   //convert weeks to seconds: days/week * hr/day * min/hr * sec/min
   rotation_t( uint8_t weeks ) : length( weeks * 7 * 24 * 60 * 60 ) {}
 
 }rotation_t;
 
-
-rotation_t        med( MED_LENGTH ) ;
-rotation_t        neuro( NEURO_LENGTH ) ;
-rotation_t        ob_gyn( OB_GYN_LENGTH ) ;
-rotation_t        pcc( PCC_LENGTH ) ;
-rotation_t        peds( PEDS_LENGTH ) ;
-rotation_t        psych( PSYCH_LENGTH ) ;
-rotation_t        surg( SURG_LENGTH ) ;
-rotation_t        vac( VAC_LENGTH ) ;
-rotation_t* const vac1 = &vac;
-rotation_t* const vac2 = &vac;
-
-rotation_t* const rotationArray[] = { &med, &neuro, &ob_gyn,  &pcc, &peds, &psych, &surg, vac1, vac2 } ;
-
+extern rotation_t* rotationArray[ ROTATION_NUM ];
 
 }

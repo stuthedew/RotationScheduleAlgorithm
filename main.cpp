@@ -17,13 +17,18 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "rotation_config.h"
+#include "grid_config.h"
 
-using namespace grid;
+
 using namespace std;
+using namespace grid;
+//allGrids[ MAX_GRIDS ] ;
 
 int main(int argc, char *argv[]) {
     loadGrid();
-    grid_t* gPtr = &allGrids[ 2 ] ;
+    cout << "test123" << endl;
+    grid_t* gPtr = &allGrids[ 0 ] ;
     cout << gPtr->maxSpots << endl;
+
+
 }
