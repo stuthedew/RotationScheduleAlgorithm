@@ -41,7 +41,7 @@ class Grid {
   void          loadGrid( void ) ;
   void          loadArray( grid_t* gPtr, uint16_t id, uint16_t maxSpots ) ;
 
-extern grid_t*       allGrids[ MAX_GRIDS ] ;
+extern grid_t       allGrids[ MAX_GRIDS ] ;
 extern time_t startTime ;
 extern struct tm * timeinfo ;
 }
